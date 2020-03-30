@@ -1,0 +1,571 @@
+2020-03-29 19:26:42 =SUPERVISOR REPORT====
+     Supervisor: {local,'Elixir.Covid19Influx.Supervisor'}
+     Context:    start_error
+     Reason:     {'EXIT',{undef,[{'Elixir.Covid19.RMQPublisher',start_link,[],[]},{supervisor,do_start_child_i,3,[{file,"supervisor.erl"},{line,379}]},{supervisor,do_start_child,2,[{file,"supervisor.erl"},{line,365}]},{supervisor,'-start_children/2-fun-0-',3,[{file,"supervisor.erl"},{line,349}]},{supervisor,children_map,4,[{file,"supervisor.erl"},{line,1157}]},{supervisor,init_children,2,[{file,"supervisor.erl"},{line,315}]},{gen_server,init_it,2,[{file,"gen_server.erl"},{line,374}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,342}]}]}}
+     Offender:   [{pid,undefined},{id,'Elixir.Covid19.RMQPublisher'},{mfargs,{'Elixir.Covid19.RMQPublisher',start_link,[]}},{restart_type,permanent},{shutdown,5000},{child_type,worker}]
+
+2020-03-29 19:26:42 =CRASH REPORT====
+  crasher:
+    initial call: application_master:init/4
+    pid: <0.338.0>
+    registered_name: []
+    exception exit: {{{shutdown,{failed_to_start_child,'Elixir.Covid19.RMQPublisher',{'EXIT',{undef,[{'Elixir.Covid19.RMQPublisher',start_link,[],[]},{supervisor,do_start_child_i,3,[{file,"supervisor.erl"},{line,379}]},{supervisor,do_start_child,2,[{file,"supervisor.erl"},{line,365}]},{supervisor,'-start_children/2-fun-0-',3,[{file,"supervisor.erl"},{line,349}]},{supervisor,children_map,4,[{file,"supervisor.erl"},{line,1157}]},{supervisor,init_children,2,[{file,"supervisor.erl"},{line,315}]},{gen_server,init_it,2,[{file,"gen_server.erl"},{line,374}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,342}]}]}}}},{'Elixir.Covid19Influx.Application',start,[normal,[]]}},[{application_master,init,4,[{file,"application_master.erl"},{line,138}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+    ancestors: [<0.337.0>]
+    message_queue_len: 1
+    messages: [{'EXIT',<0.339.0>,normal}]
+    links: [<0.337.0>,<0.43.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 987
+    stack_size: 27
+    reductions: 243
+  neighbours:
+2020-03-29 19:27:22 =SUPERVISOR REPORT====
+     Supervisor: {local,'Elixir.Covid19Influx.Supervisor'}
+     Context:    start_error
+     Reason:     {{badmatch,{error,not_allowed}},[{'Elixir.Covid19Influx.RMQPublisher',create_rmq_resources,0,[{file,"lib/rmq_publisher.ex"},{line,41}]},{'Elixir.Covid19Influx.RMQPublisher',init,0,[{file,"lib/rmq_publisher.ex"},{line,11}]},{'Elixir.GenRMQ.Publisher',init,1,[{file,"lib/publisher.ex"},{line,215}]},{gen_server,init_it,2,[{file,"gen_server.erl"},{line,374}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,342}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+     Offender:   [{pid,undefined},{id,'Elixir.Covid19Influx.RMQPublisher'},{mfargs,{'Elixir.Covid19Influx.RMQPublisher',start_link,[]}},{restart_type,permanent},{shutdown,5000},{child_type,worker}]
+
+2020-03-29 19:27:22 =CRASH REPORT====
+  crasher:
+    initial call: Elixir.GenRMQ.Publisher:init/1
+    pid: <0.339.0>
+    registered_name: []
+    exception error: {{badmatch,{error,not_allowed}},[{'Elixir.Covid19Influx.RMQPublisher',create_rmq_resources,0,[{file,"lib/rmq_publisher.ex"},{line,41}]},{'Elixir.Covid19Influx.RMQPublisher',init,0,[{file,"lib/rmq_publisher.ex"},{line,11}]},{'Elixir.GenRMQ.Publisher',init,1,[{file,"lib/publisher.ex"},{line,215}]},{gen_server,init_it,2,[{file,"gen_server.erl"},{line,374}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,342}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+    ancestors: ['Elixir.Covid19Influx.Supervisor',<0.328.0>]
+    message_queue_len: 0
+    messages: []
+    links: [<0.329.0>]
+    dictionary: [{gen_server_call_timeout,60000}]
+    trap_exit: true
+    status: running
+    heap_size: 987
+    stack_size: 27
+    reductions: 51527
+  neighbours:
+2020-03-29 19:27:22 =CRASH REPORT====
+  crasher:
+    initial call: application_master:init/4
+    pid: <0.327.0>
+    registered_name: []
+    exception exit: {{{shutdown,{failed_to_start_child,'Elixir.Covid19Influx.RMQPublisher',{{badmatch,{error,not_allowed}},[{'Elixir.Covid19Influx.RMQPublisher',create_rmq_resources,0,[{file,"lib/rmq_publisher.ex"},{line,41}]},{'Elixir.Covid19Influx.RMQPublisher',init,0,[{file,"lib/rmq_publisher.ex"},{line,11}]},{'Elixir.GenRMQ.Publisher',init,1,[{file,"lib/publisher.ex"},{line,215}]},{gen_server,init_it,2,[{file,"gen_server.erl"},{line,374}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,342}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}}},{'Elixir.Covid19Influx.Application',start,[normal,[]]}},[{application_master,init,4,[{file,"application_master.erl"},{line,138}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+    ancestors: [<0.326.0>]
+    message_queue_len: 1
+    messages: [{'EXIT',<0.328.0>,normal}]
+    links: [<0.326.0>,<0.43.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 610
+    stack_size: 27
+    reductions: 226
+  neighbours:
+2020-03-29 21:53:35 =CRASH REPORT====
+  crasher:
+    initial call: Elixir.Covid19Influx.ApplicationSettings:init/1
+    pid: <0.371.0>
+    registered_name: []
+    exception error: bad argument: [{dets,open_file,[app_settings,[set,public,{file,<<"covid_19_settings.txt">>}]],[{file,"dets.erl"},{line,658}]},{'Elixir.Covid19Influx.ApplicationSettings',init,1,[{file,"lib/application_settings.ex"},{line,9}]},{gen_server,init_it,2,[{file,"gen_server.erl"},{line,374}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,342}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]
+    ancestors: ['Elixir.Covid19Influx.Supervisor',<0.344.0>]
+    message_queue_len: 0
+    messages: []
+    links: [<0.345.0>]
+    dictionary: []
+    trap_exit: false
+    status: running
+    heap_size: 376
+    stack_size: 27
+    reductions: 276
+  neighbours:
+2020-03-29 21:53:35 =SUPERVISOR REPORT====
+     Supervisor: {local,'Elixir.Covid19Influx.Supervisor'}
+     Context:    start_error
+     Reason:     {badarg,[{dets,open_file,[app_settings,[set,public,{file,<<"covid_19_settings.txt">>}]],[{file,"dets.erl"},{line,658}]},{'Elixir.Covid19Influx.ApplicationSettings',init,1,[{file,"lib/application_settings.ex"},{line,9}]},{gen_server,init_it,2,[{file,"gen_server.erl"},{line,374}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,342}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+     Offender:   [{pid,undefined},{id,'Elixir.Covid19Influx.ApplicationSettings'},{mfargs,{'Elixir.Covid19Influx.ApplicationSettings',start_link,[[]]}},{restart_type,permanent},{shutdown,5000},{child_type,worker}]
+
+2020-03-29 21:53:35 =CRASH REPORT====
+  crasher:
+    initial call: application_master:init/4
+    pid: <0.343.0>
+    registered_name: []
+    exception exit: {{{shutdown,{failed_to_start_child,'Elixir.Covid19Influx.ApplicationSettings',{badarg,[{dets,open_file,[app_settings,[set,public,{file,<<"covid_19_settings.txt">>}]],[{file,"dets.erl"},{line,658}]},{'Elixir.Covid19Influx.ApplicationSettings',init,1,[{file,"lib/application_settings.ex"},{line,9}]},{gen_server,init_it,2,[{file,"gen_server.erl"},{line,374}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,342}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}}},{'Elixir.Covid19Influx.Application',start,[normal,[]]}},[{application_master,init,4,[{file,"application_master.erl"},{line,138}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+    ancestors: [<0.342.0>]
+    message_queue_len: 1
+    messages: [{'EXIT',<0.344.0>,normal}]
+    links: [<0.342.0>,<0.43.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 610
+    stack_size: 27
+    reductions: 219
+  neighbours:
+2020-03-29 21:54:28 =CRASH REPORT====
+  crasher:
+    initial call: Elixir.Covid19Influx.ApplicationSettings:init/1
+    pid: <0.355.0>
+    registered_name: []
+    exception error: bad argument: [{dets,open_file,[app_settings,[set,public,{file,<<"covid_19_settings.txt">>}]],[{file,"dets.erl"},{line,658}]},{'Elixir.Covid19Influx.ApplicationSettings',init,1,[{file,"lib/application_settings.ex"},{line,9}]},{gen_server,init_it,2,[{file,"gen_server.erl"},{line,374}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,342}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]
+    ancestors: ['Elixir.Covid19Influx.Supervisor',<0.328.0>]
+    message_queue_len: 0
+    messages: []
+    links: [<0.329.0>]
+    dictionary: []
+    trap_exit: false
+    status: running
+    heap_size: 376
+    stack_size: 27
+    reductions: 276
+  neighbours:
+2020-03-29 21:54:28 =SUPERVISOR REPORT====
+     Supervisor: {local,'Elixir.Covid19Influx.Supervisor'}
+     Context:    start_error
+     Reason:     {badarg,[{dets,open_file,[app_settings,[set,public,{file,<<"covid_19_settings.txt">>}]],[{file,"dets.erl"},{line,658}]},{'Elixir.Covid19Influx.ApplicationSettings',init,1,[{file,"lib/application_settings.ex"},{line,9}]},{gen_server,init_it,2,[{file,"gen_server.erl"},{line,374}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,342}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+     Offender:   [{pid,undefined},{id,'Elixir.Covid19Influx.ApplicationSettings'},{mfargs,{'Elixir.Covid19Influx.ApplicationSettings',start_link,[[]]}},{restart_type,permanent},{shutdown,5000},{child_type,worker}]
+
+2020-03-29 21:54:28 =CRASH REPORT====
+  crasher:
+    initial call: application_master:init/4
+    pid: <0.327.0>
+    registered_name: []
+    exception exit: {{{shutdown,{failed_to_start_child,'Elixir.Covid19Influx.ApplicationSettings',{badarg,[{dets,open_file,[app_settings,[set,public,{file,<<"covid_19_settings.txt">>}]],[{file,"dets.erl"},{line,658}]},{'Elixir.Covid19Influx.ApplicationSettings',init,1,[{file,"lib/application_settings.ex"},{line,9}]},{gen_server,init_it,2,[{file,"gen_server.erl"},{line,374}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,342}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}}},{'Elixir.Covid19Influx.Application',start,[normal,[]]}},[{application_master,init,4,[{file,"application_master.erl"},{line,138}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+    ancestors: [<0.326.0>]
+    message_queue_len: 1
+    messages: [{'EXIT',<0.328.0>,normal}]
+    links: [<0.326.0>,<0.43.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 610
+    stack_size: 27
+    reductions: 223
+  neighbours:
+2020-03-29 21:55:04 =CRASH REPORT====
+  crasher:
+    initial call: Elixir.Covid19Influx.ApplicationSettings:init/1
+    pid: <0.355.0>
+    registered_name: []
+    exception error: bad argument: [{dets,open_file,[app_settings,[set,public]],[{file,"dets.erl"},{line,658}]},{'Elixir.Covid19Influx.ApplicationSettings',init,1,[{file,"lib/application_settings.ex"},{line,9}]},{gen_server,init_it,2,[{file,"gen_server.erl"},{line,374}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,342}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]
+    ancestors: ['Elixir.Covid19Influx.Supervisor',<0.328.0>]
+    message_queue_len: 0
+    messages: []
+    links: [<0.329.0>]
+    dictionary: []
+    trap_exit: false
+    status: running
+    heap_size: 376
+    stack_size: 27
+    reductions: 276
+  neighbours:
+2020-03-29 21:55:04 =SUPERVISOR REPORT====
+     Supervisor: {local,'Elixir.Covid19Influx.Supervisor'}
+     Context:    start_error
+     Reason:     {badarg,[{dets,open_file,[app_settings,[set,public]],[{file,"dets.erl"},{line,658}]},{'Elixir.Covid19Influx.ApplicationSettings',init,1,[{file,"lib/application_settings.ex"},{line,9}]},{gen_server,init_it,2,[{file,"gen_server.erl"},{line,374}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,342}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+     Offender:   [{pid,undefined},{id,'Elixir.Covid19Influx.ApplicationSettings'},{mfargs,{'Elixir.Covid19Influx.ApplicationSettings',start_link,[[]]}},{restart_type,permanent},{shutdown,5000},{child_type,worker}]
+
+2020-03-29 21:55:04 =CRASH REPORT====
+  crasher:
+    initial call: application_master:init/4
+    pid: <0.327.0>
+    registered_name: []
+    exception exit: {{{shutdown,{failed_to_start_child,'Elixir.Covid19Influx.ApplicationSettings',{badarg,[{dets,open_file,[app_settings,[set,public]],[{file,"dets.erl"},{line,658}]},{'Elixir.Covid19Influx.ApplicationSettings',init,1,[{file,"lib/application_settings.ex"},{line,9}]},{gen_server,init_it,2,[{file,"gen_server.erl"},{line,374}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,342}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}}},{'Elixir.Covid19Influx.Application',start,[normal,[]]}},[{application_master,init,4,[{file,"application_master.erl"},{line,138}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+    ancestors: [<0.326.0>]
+    message_queue_len: 1
+    messages: [{'EXIT',<0.328.0>,normal}]
+    links: [<0.326.0>,<0.43.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 610
+    stack_size: 27
+    reductions: 223
+  neighbours:
+2020-03-29 21:58:29 =CRASH REPORT====
+  crasher:
+    initial call: Elixir.Covid19Influx.ApplicationSettings:init/1
+    pid: <0.355.0>
+    registered_name: []
+    exception error: bad argument: [{dets,open_file,[app_settings,[public]],[{file,"dets.erl"},{line,658}]},{'Elixir.Covid19Influx.ApplicationSettings',init,1,[{file,"lib/application_settings.ex"},{line,9}]},{gen_server,init_it,2,[{file,"gen_server.erl"},{line,374}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,342}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]
+    ancestors: ['Elixir.Covid19Influx.Supervisor',<0.328.0>]
+    message_queue_len: 0
+    messages: []
+    links: [<0.329.0>]
+    dictionary: []
+    trap_exit: false
+    status: running
+    heap_size: 376
+    stack_size: 27
+    reductions: 277
+  neighbours:
+2020-03-29 21:58:29 =SUPERVISOR REPORT====
+     Supervisor: {local,'Elixir.Covid19Influx.Supervisor'}
+     Context:    start_error
+     Reason:     {badarg,[{dets,open_file,[app_settings,[public]],[{file,"dets.erl"},{line,658}]},{'Elixir.Covid19Influx.ApplicationSettings',init,1,[{file,"lib/application_settings.ex"},{line,9}]},{gen_server,init_it,2,[{file,"gen_server.erl"},{line,374}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,342}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+     Offender:   [{pid,undefined},{id,'Elixir.Covid19Influx.ApplicationSettings'},{mfargs,{'Elixir.Covid19Influx.ApplicationSettings',start_link,[[]]}},{restart_type,permanent},{shutdown,5000},{child_type,worker}]
+
+2020-03-29 21:58:29 =CRASH REPORT====
+  crasher:
+    initial call: application_master:init/4
+    pid: <0.327.0>
+    registered_name: []
+    exception exit: {{{shutdown,{failed_to_start_child,'Elixir.Covid19Influx.ApplicationSettings',{badarg,[{dets,open_file,[app_settings,[public]],[{file,"dets.erl"},{line,658}]},{'Elixir.Covid19Influx.ApplicationSettings',init,1,[{file,"lib/application_settings.ex"},{line,9}]},{gen_server,init_it,2,[{file,"gen_server.erl"},{line,374}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,342}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}}},{'Elixir.Covid19Influx.Application',start,[normal,[]]}},[{application_master,init,4,[{file,"application_master.erl"},{line,138}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+    ancestors: [<0.326.0>]
+    message_queue_len: 1
+    messages: [{'EXIT',<0.328.0>,normal}]
+    links: [<0.326.0>,<0.43.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 610
+    stack_size: 27
+    reductions: 223
+  neighbours:
+2020-03-29 21:59:22 =SUPERVISOR REPORT====
+     Supervisor: {local,'Elixir.Covid19Influx.Supervisor'}
+     Context:    start_error
+     Reason:     {badarg,[{dets,open_file,[app_settings,[{access,public}]],[{file,"dets.erl"},{line,658}]},{'Elixir.Covid19Influx.ApplicationSettings',init,1,[{file,"lib/application_settings.ex"},{line,9}]},{gen_server,init_it,2,[{file,"gen_server.erl"},{line,374}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,342}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+     Offender:   [{pid,undefined},{id,'Elixir.Covid19Influx.ApplicationSettings'},{mfargs,{'Elixir.Covid19Influx.ApplicationSettings',start_link,[[]]}},{restart_type,permanent},{shutdown,5000},{child_type,worker}]
+
+2020-03-29 21:59:22 =CRASH REPORT====
+  crasher:
+    initial call: Elixir.Covid19Influx.ApplicationSettings:init/1
+    pid: <0.355.0>
+    registered_name: []
+    exception error: bad argument: [{dets,open_file,[app_settings,[{access,public}]],[{file,"dets.erl"},{line,658}]},{'Elixir.Covid19Influx.ApplicationSettings',init,1,[{file,"lib/application_settings.ex"},{line,9}]},{gen_server,init_it,2,[{file,"gen_server.erl"},{line,374}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,342}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]
+    ancestors: ['Elixir.Covid19Influx.Supervisor',<0.328.0>]
+    message_queue_len: 0
+    messages: []
+    links: [<0.329.0>]
+    dictionary: []
+    trap_exit: false
+    status: running
+    heap_size: 610
+    stack_size: 27
+    reductions: 247
+  neighbours:
+2020-03-29 21:59:22 =CRASH REPORT====
+  crasher:
+    initial call: application_master:init/4
+    pid: <0.327.0>
+    registered_name: []
+    exception exit: {{{shutdown,{failed_to_start_child,'Elixir.Covid19Influx.ApplicationSettings',{badarg,[{dets,open_file,[app_settings,[{access,public}]],[{file,"dets.erl"},{line,658}]},{'Elixir.Covid19Influx.ApplicationSettings',init,1,[{file,"lib/application_settings.ex"},{line,9}]},{gen_server,init_it,2,[{file,"gen_server.erl"},{line,374}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,342}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}}},{'Elixir.Covid19Influx.Application',start,[normal,[]]}},[{application_master,init,4,[{file,"application_master.erl"},{line,138}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+    ancestors: [<0.326.0>]
+    message_queue_len: 1
+    messages: [{'EXIT',<0.328.0>,normal}]
+    links: [<0.326.0>,<0.43.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 610
+    stack_size: 27
+    reductions: 219
+  neighbours:
+2020-03-29 21:59:42 =SUPERVISOR REPORT====
+     Supervisor: {local,'Elixir.Covid19Influx.Supervisor'}
+     Context:    start_error
+     Reason:     {badarg,[{dets,open_file,[app_settings,[{file,<<"app_settings">>}]],[{file,"dets.erl"},{line,658}]},{'Elixir.Covid19Influx.ApplicationSettings',init,1,[{file,"lib/application_settings.ex"},{line,9}]},{gen_server,init_it,2,[{file,"gen_server.erl"},{line,374}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,342}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+     Offender:   [{pid,undefined},{id,'Elixir.Covid19Influx.ApplicationSettings'},{mfargs,{'Elixir.Covid19Influx.ApplicationSettings',start_link,[[]]}},{restart_type,permanent},{shutdown,5000},{child_type,worker}]
+
+2020-03-29 21:59:42 =CRASH REPORT====
+  crasher:
+    initial call: Elixir.Covid19Influx.ApplicationSettings:init/1
+    pid: <0.355.0>
+    registered_name: []
+    exception error: bad argument: [{dets,open_file,[app_settings,[{file,<<"app_settings">>}]],[{file,"dets.erl"},{line,658}]},{'Elixir.Covid19Influx.ApplicationSettings',init,1,[{file,"lib/application_settings.ex"},{line,9}]},{gen_server,init_it,2,[{file,"gen_server.erl"},{line,374}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,342}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]
+    ancestors: ['Elixir.Covid19Influx.Supervisor',<0.328.0>]
+    message_queue_len: 0
+    messages: []
+    links: [<0.329.0>]
+    dictionary: []
+    trap_exit: false
+    status: running
+    heap_size: 376
+    stack_size: 27
+    reductions: 279
+  neighbours:
+2020-03-29 21:59:42 =CRASH REPORT====
+  crasher:
+    initial call: application_master:init/4
+    pid: <0.327.0>
+    registered_name: []
+    exception exit: {{{shutdown,{failed_to_start_child,'Elixir.Covid19Influx.ApplicationSettings',{badarg,[{dets,open_file,[app_settings,[{file,<<"app_settings">>}]],[{file,"dets.erl"},{line,658}]},{'Elixir.Covid19Influx.ApplicationSettings',init,1,[{file,"lib/application_settings.ex"},{line,9}]},{gen_server,init_it,2,[{file,"gen_server.erl"},{line,374}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,342}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}}},{'Elixir.Covid19Influx.Application',start,[normal,[]]}},[{application_master,init,4,[{file,"application_master.erl"},{line,138}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+    ancestors: [<0.326.0>]
+    message_queue_len: 1
+    messages: [{'EXIT',<0.328.0>,normal}]
+    links: [<0.326.0>,<0.43.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 610
+    stack_size: 27
+    reductions: 223
+  neighbours:
+2020-03-29 21:59:57 =SUPERVISOR REPORT====
+     Supervisor: {local,'Elixir.Covid19Influx.Supervisor'}
+     Context:    start_error
+     Reason:     {badarg,[{dets,open_file,[app_settings,[{file,<<"app_settings">>}]],[{file,"dets.erl"},{line,658}]},{'Elixir.Covid19Influx.ApplicationSettings',init,1,[{file,"lib/application_settings.ex"},{line,9}]},{gen_server,init_it,2,[{file,"gen_server.erl"},{line,374}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,342}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+     Offender:   [{pid,undefined},{id,'Elixir.Covid19Influx.ApplicationSettings'},{mfargs,{'Elixir.Covid19Influx.ApplicationSettings',start_link,[[]]}},{restart_type,permanent},{shutdown,5000},{child_type,worker}]
+
+2020-03-29 21:59:57 =CRASH REPORT====
+  crasher:
+    initial call: Elixir.Covid19Influx.ApplicationSettings:init/1
+    pid: <0.355.0>
+    registered_name: []
+    exception error: bad argument: [{dets,open_file,[app_settings,[{file,<<"app_settings">>}]],[{file,"dets.erl"},{line,658}]},{'Elixir.Covid19Influx.ApplicationSettings',init,1,[{file,"lib/application_settings.ex"},{line,9}]},{gen_server,init_it,2,[{file,"gen_server.erl"},{line,374}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,342}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]
+    ancestors: ['Elixir.Covid19Influx.Supervisor',<0.328.0>]
+    message_queue_len: 0
+    messages: []
+    links: [<0.329.0>]
+    dictionary: []
+    trap_exit: false
+    status: running
+    heap_size: 376
+    stack_size: 27
+    reductions: 277
+  neighbours:
+2020-03-29 21:59:57 =CRASH REPORT====
+  crasher:
+    initial call: application_master:init/4
+    pid: <0.327.0>
+    registered_name: []
+    exception exit: {{{shutdown,{failed_to_start_child,'Elixir.Covid19Influx.ApplicationSettings',{badarg,[{dets,open_file,[app_settings,[{file,<<"app_settings">>}]],[{file,"dets.erl"},{line,658}]},{'Elixir.Covid19Influx.ApplicationSettings',init,1,[{file,"lib/application_settings.ex"},{line,9}]},{gen_server,init_it,2,[{file,"gen_server.erl"},{line,374}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,342}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}}},{'Elixir.Covid19Influx.Application',start,[normal,[]]}},[{application_master,init,4,[{file,"application_master.erl"},{line,138}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+    ancestors: [<0.326.0>]
+    message_queue_len: 1
+    messages: [{'EXIT',<0.328.0>,normal}]
+    links: [<0.326.0>,<0.43.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 610
+    stack_size: 27
+    reductions: 222
+  neighbours:
+2020-03-29 22:10:25 =CRASH REPORT====
+  crasher:
+    initial call: Elixir.Covid19Influx.ApplicationSettings:init/1
+    pid: <0.355.0>
+    registered_name: []
+    exception error: bad argument: [{dets,open_file,[app_settings,[{type,set},{file,<<"properties">>}]],[{file,"dets.erl"},{line,658}]},{'Elixir.Covid19Influx.ApplicationSettings',init,1,[{file,"lib/application_settings.ex"},{line,9}]},{gen_server,init_it,2,[{file,"gen_server.erl"},{line,374}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,342}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]
+    ancestors: ['Elixir.Covid19Influx.Supervisor',<0.328.0>]
+    message_queue_len: 0
+    messages: []
+    links: [<0.329.0>]
+    dictionary: []
+    trap_exit: false
+    status: running
+    heap_size: 376
+    stack_size: 27
+    reductions: 286
+  neighbours:
+2020-03-29 22:10:25 =SUPERVISOR REPORT====
+     Supervisor: {local,'Elixir.Covid19Influx.Supervisor'}
+     Context:    start_error
+     Reason:     {badarg,[{dets,open_file,[app_settings,[{type,set},{file,<<"properties">>}]],[{file,"dets.erl"},{line,658}]},{'Elixir.Covid19Influx.ApplicationSettings',init,1,[{file,"lib/application_settings.ex"},{line,9}]},{gen_server,init_it,2,[{file,"gen_server.erl"},{line,374}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,342}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+     Offender:   [{pid,undefined},{id,'Elixir.Covid19Influx.ApplicationSettings'},{mfargs,{'Elixir.Covid19Influx.ApplicationSettings',start_link,[[]]}},{restart_type,permanent},{shutdown,5000},{child_type,worker}]
+
+2020-03-29 22:10:25 =CRASH REPORT====
+  crasher:
+    initial call: application_master:init/4
+    pid: <0.327.0>
+    registered_name: []
+    exception exit: {{{shutdown,{failed_to_start_child,'Elixir.Covid19Influx.ApplicationSettings',{badarg,[{dets,open_file,[app_settings,[{type,set},{file,<<"properties">>}]],[{file,"dets.erl"},{line,658}]},{'Elixir.Covid19Influx.ApplicationSettings',init,1,[{file,"lib/application_settings.ex"},{line,9}]},{gen_server,init_it,2,[{file,"gen_server.erl"},{line,374}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,342}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}}},{'Elixir.Covid19Influx.Application',start,[normal,[]]}},[{application_master,init,4,[{file,"application_master.erl"},{line,138}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+    ancestors: [<0.326.0>]
+    message_queue_len: 1
+    messages: [{'EXIT',<0.328.0>,normal}]
+    links: [<0.326.0>,<0.43.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 610
+    stack_size: 27
+    reductions: 222
+  neighbours:
+2020-03-29 22:26:46 =SUPERVISOR REPORT====
+     Supervisor: {local,'Elixir.Covid19Influx.Supervisor'}
+     Context:    start_error
+     Reason:     {function_clause,[{'Elixir.Date',from_iso8601,[1997,'Elixir.Calendar.ISO'],[{file,"lib/calendar/date.ex"},{line,268}]},{'Elixir.Date','from_iso8601!',2,[{file,"lib/calendar/date.ex"},{line,309}]},{'Elixir.Covid19Influx.ApplicationSettings',put_default_values,0,[{file,"lib/application_settings.ex"},{line,30}]},{'Elixir.Covid19Influx.ApplicationSettings',init,1,[{file,"lib/application_settings.ex"},{line,11}]},{gen_server,init_it,2,[{file,"gen_server.erl"},{line,374}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,342}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+     Offender:   [{pid,undefined},{id,'Elixir.Covid19Influx.ApplicationSettings'},{mfargs,{'Elixir.Covid19Influx.ApplicationSettings',start_link,[[]]}},{restart_type,permanent},{shutdown,5000},{child_type,worker}]
+
+2020-03-29 22:26:46 =CRASH REPORT====
+  crasher:
+    initial call: Elixir.Covid19Influx.ApplicationSettings:init/1
+    pid: <0.360.0>
+    registered_name: []
+    exception error: {function_clause,[{'Elixir.Date',from_iso8601,[1997,'Elixir.Calendar.ISO'],[{file,"lib/calendar/date.ex"},{line,268}]},{'Elixir.Date','from_iso8601!',2,[{file,"lib/calendar/date.ex"},{line,309}]},{'Elixir.Covid19Influx.ApplicationSettings',put_default_values,0,[{file,"lib/application_settings.ex"},{line,30}]},{'Elixir.Covid19Influx.ApplicationSettings',init,1,[{file,"lib/application_settings.ex"},{line,11}]},{gen_server,init_it,2,[{file,"gen_server.erl"},{line,374}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,342}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+    ancestors: ['Elixir.Covid19Influx.Supervisor',<0.333.0>]
+    message_queue_len: 0
+    messages: []
+    links: [<0.334.0>,<0.367.0>]
+    dictionary: []
+    trap_exit: false
+    status: running
+    heap_size: 610
+    stack_size: 27
+    reductions: 368
+  neighbours:
+2020-03-29 22:26:46 =CRASH REPORT====
+  crasher:
+    initial call: application_master:init/4
+    pid: <0.332.0>
+    registered_name: []
+    exception exit: {{{shutdown,{failed_to_start_child,'Elixir.Covid19Influx.ApplicationSettings',{function_clause,[{'Elixir.Date',from_iso8601,[1997,'Elixir.Calendar.ISO'],[{file,"lib/calendar/date.ex"},{line,268}]},{'Elixir.Date','from_iso8601!',2,[{file,"lib/calendar/date.ex"},{line,309}]},{'Elixir.Covid19Influx.ApplicationSettings',put_default_values,0,[{file,"lib/application_settings.ex"},{line,30}]},{'Elixir.Covid19Influx.ApplicationSettings',init,1,[{file,"lib/application_settings.ex"},{line,11}]},{gen_server,init_it,2,[{file,"gen_server.erl"},{line,374}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,342}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}}},{'Elixir.Covid19Influx.Application',start,[normal,[]]}},[{application_master,init,4,[{file,"application_master.erl"},{line,138}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+    ancestors: [<0.331.0>]
+    message_queue_len: 1
+    messages: [{'EXIT',<0.333.0>,normal}]
+    links: [<0.331.0>,<0.43.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 987
+    stack_size: 27
+    reductions: 240
+  neighbours:
+2020-03-29 22:27:04 =CRASH REPORT====
+  crasher:
+    initial call: Elixir.Covid19Influx.ApplicationSettings:init/1
+    pid: <0.355.0>
+    registered_name: []
+    exception error: {#{'__exception__' => true,'__struct__' => 'Elixir.ArgumentError',message => <<"cannot parse \"2020-1-22\" as date, reason: :invalid_format">>},[{'Elixir.Date','from_iso8601!',2,[{file,"lib/calendar/date.ex"},{line,314}]},{'Elixir.Covid19Influx.ApplicationSettings',put_default_values,0,[{file,"lib/application_settings.ex"},{line,30}]},{'Elixir.Covid19Influx.ApplicationSettings',init,1,[{file,"lib/application_settings.ex"},{line,11}]},{gen_server,init_it,2,[{file,"gen_server.erl"},{line,374}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,342}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+    ancestors: ['Elixir.Covid19Influx.Supervisor',<0.328.0>]
+    message_queue_len: 0
+    messages: []
+    links: [<0.329.0>,<0.365.0>]
+    dictionary: []
+    trap_exit: false
+    status: running
+    heap_size: 610
+    stack_size: 27
+    reductions: 608
+  neighbours:
+2020-03-29 22:27:04 =SUPERVISOR REPORT====
+     Supervisor: {local,'Elixir.Covid19Influx.Supervisor'}
+     Context:    start_error
+     Reason:     {#{'__exception__' => true,'__struct__' => 'Elixir.ArgumentError',message => <<"cannot parse \"2020-1-22\" as date, reason: :invalid_format">>},[{'Elixir.Date','from_iso8601!',2,[{file,"lib/calendar/date.ex"},{line,314}]},{'Elixir.Covid19Influx.ApplicationSettings',put_default_values,0,[{file,"lib/application_settings.ex"},{line,30}]},{'Elixir.Covid19Influx.ApplicationSettings',init,1,[{file,"lib/application_settings.ex"},{line,11}]},{gen_server,init_it,2,[{file,"gen_server.erl"},{line,374}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,342}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+     Offender:   [{pid,undefined},{id,'Elixir.Covid19Influx.ApplicationSettings'},{mfargs,{'Elixir.Covid19Influx.ApplicationSettings',start_link,[[]]}},{restart_type,permanent},{shutdown,5000},{child_type,worker}]
+
+2020-03-29 22:27:04 =CRASH REPORT====
+  crasher:
+    initial call: application_master:init/4
+    pid: <0.327.0>
+    registered_name: []
+    exception exit: {{{shutdown,{failed_to_start_child,'Elixir.Covid19Influx.ApplicationSettings',{#{'__exception__' => true,'__struct__' => 'Elixir.ArgumentError',message => <<"cannot parse \"2020-1-22\" as date, reason: :invalid_format">>},[{'Elixir.Date','from_iso8601!',2,[{file,"lib/calendar/date.ex"},{line,314}]},{'Elixir.Covid19Influx.ApplicationSettings',put_default_values,0,[{file,"lib/application_settings.ex"},{line,30}]},{'Elixir.Covid19Influx.ApplicationSettings',init,1,[{file,"lib/application_settings.ex"},{line,11}]},{gen_server,init_it,2,[{file,"gen_server.erl"},{line,374}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,342}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}}},{'Elixir.Covid19Influx.Application',start,[normal,[]]}},[{application_master,init,4,[{file,"application_master.erl"},{line,138}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+    ancestors: [<0.326.0>]
+    message_queue_len: 1
+    messages: [{'EXIT',<0.328.0>,normal}]
+    links: [<0.326.0>,<0.43.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 610
+    stack_size: 27
+    reductions: 234
+  neighbours:
+2020-03-29 23:26:52 =CRASH REPORT====
+  crasher:
+    initial call: application_master:init/4
+    pid: <0.386.0>
+    registered_name: []
+    exception exit: {{bad_return,{{'Elixir.Covid19Influx.Application',start,[normal,[]]},{'EXIT',{badarg,[{dets,lookup,[app_settings,<<"latest_fetched">>],[{file,"dets.erl"},{line,1259}]},{'Elixir.Covid19Influx.ApplicationSettings',get,1,[{file,"lib/application_settings.ex"},{line,21}]},{'Elixir.Covid19Influx.DateRangeGenerator',get_latest_fetched,0,[{file,"lib/date_range_generator.ex"},{line,25}]},{'Elixir.Covid19Influx.DateRangeGenerator',generate_dates,0,[{file,"lib/date_range_generator.ex"},{line,6}]},{'Elixir.Covid19Influx.Application',start,2,[{file,"lib/covid19_influx/application.ex"},{line,17}]},{application_master,start_it_old,4,[{file,"application_master.erl"},{line,277}]}]}}}},[{application_master,init,4,[{file,"application_master.erl"},{line,138}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+    ancestors: [<0.385.0>]
+    message_queue_len: 1
+    messages: [{'EXIT',<0.387.0>,normal}]
+    links: [<0.385.0>,<0.43.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 987
+    stack_size: 27
+    reductions: 249
+  neighbours:
+2020-03-29 23:36:13 =CRASH REPORT====
+  crasher:
+    initial call: application_master:init/4
+    pid: <0.331.0>
+    registered_name: []
+    exception exit: {{bad_return,{{'Elixir.Covid19Influx.Application',start,[normal,[]]},{'EXIT',{noproc,{'Elixir.GenServer',call,['Elixir.Covid19Influx.ApplicationSettings',{get,<<"latest_fetched">>},5000]}}}}},[{application_master,init,4,[{file,"application_master.erl"},{line,138}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+    ancestors: [<0.330.0>]
+    message_queue_len: 1
+    messages: [{'EXIT',<0.332.0>,normal}]
+    links: [<0.330.0>,<0.43.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 376
+    stack_size: 27
+    reductions: 228
+  neighbours:
+2020-03-29 23:36:58 =ERROR REPORT====
+** Generic server 'Elixir.Covid19Influx.ApplicationSettings' terminating 
+** Last message in was {get,<<"latest_fetched">>}
+** When Server state == #{dets_ref => app_settings}
+** Reason for termination ==
+** {bad_return_value,{ok,nil,#{dets_ref => app_settings}}}
+** Client <0.332.0> stacktrace
+** [{gen,do_call,4,[{file,"gen.erl"},{line,167}]},{'Elixir.GenServer',call,3,[{file,"lib/gen_server.ex"},{line,1006}]},{'Elixir.Covid19Influx.DateRangeGenerator',get_latest_fetched,0,[{file,"lib/date_range_generator.ex"},{line,25}]},{'Elixir.Covid19Influx.DateRangeGenerator',generate_dates,0,[{file,"lib/date_range_generator.ex"},{line,6}]},{application_master,start_it_old,4,[{file,"application_master.erl"},{line,277}]}]
+2020-03-29 23:36:58 =CRASH REPORT====
+  crasher:
+    initial call: Elixir.Covid19Influx.ApplicationSettings:init/1
+    pid: <0.334.0>
+    registered_name: 'Elixir.Covid19Influx.ApplicationSettings'
+    exception exit: {{bad_return_value,{ok,nil,#{dets_ref => app_settings}}},[{gen_server,handle_common_reply,8,[{file,"gen_server.erl"},{line,755}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+    ancestors: ['Elixir.Covid19Influx.Supervisor',<0.332.0>]
+    message_queue_len: 0
+    messages: []
+    links: [<0.333.0>,<0.336.0>]
+    dictionary: []
+    trap_exit: false
+    status: running
+    heap_size: 6772
+    stack_size: 27
+    reductions: 5132
+  neighbours:
+2020-03-29 23:36:58 =SUPERVISOR REPORT====
+     Supervisor: {local,'Elixir.Covid19Influx.Supervisor'}
+     Context:    child_terminated
+     Reason:     {bad_return_value,{ok,nil,#{dets_ref => app_settings}}}
+     Offender:   [{pid,<0.334.0>},{id,'Elixir.Covid19Influx.ApplicationSettings'},{mfargs,{'Elixir.Covid19Influx.ApplicationSettings',start_link,[[]]}},{restart_type,permanent},{shutdown,5000},{child_type,worker}]
+
+2020-03-29 23:36:58 =CRASH REPORT====
+  crasher:
+    initial call: application_master:init/4
+    pid: <0.331.0>
+    registered_name: []
+    exception exit: {{bad_return,{{'Elixir.Covid19Influx.Application',start,[normal,[]]},{'EXIT',{{bad_return_value,{ok,nil,#{dets_ref => app_settings}}},{'Elixir.GenServer',call,['Elixir.Covid19Influx.ApplicationSettings',{get,<<"latest_fetched">>},5000]}}}}},[{application_master,init,4,[{file,"application_master.erl"},{line,138}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+    ancestors: [<0.330.0>]
+    message_queue_len: 1
+    messages: [{'EXIT',<0.332.0>,normal}]
+    links: [<0.330.0>,<0.43.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 610
+    stack_size: 27
+    reductions: 219
+  neighbours:
+2020-03-29 23:38:40 =ERROR REPORT====
+Error in process <0.337.0> with exit value:
+{badarg,[{erlang,link,[<<"{\"end\":\"2020-03-28\",\"start\":\"2020-01-22\"}">>],[]},{application_master,start_it_old,4,[{file,"application_master.erl"},{line,279}]}]}
+2020-03-29 23:38:40 =CRASH REPORT====
+  crasher:
+    initial call: application_master:init/4
+    pid: <0.336.0>
+    registered_name: []
+    exception exit: {{badarg,[{erlang,link,[<<"{\"end\":\"2020-03-28\",\"start\":\"2020-01-22\"}">>],[]},{application_master,start_it_old,4,[{file,"application_master.erl"},{line,279}]}]},[{application_master,init,4,[{file,"application_master.erl"},{line,138}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+    ancestors: [<0.335.0>]
+    message_queue_len: 0
+    messages: []
+    links: [<0.335.0>,<0.43.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 376
+    stack_size: 27
+    reductions: 234
+  neighbours:
+2020-03-29 23:38:40 =ERROR REPORT====
+** Generic server 'Elixir.Covid19Influx.Supervisor' terminating 
+** Last message in was {'EXIT',<0.337.0>,{badarg,[{erlang,link,[<<"{\"end\":\"2020-03-28\",\"start\":\"2020-01-22\"}">>],[]},{application_master,start_it_old,4,[{file,"application_master.erl"},{line,279}]}]}}
+** When Server state == {state,{local,'Elixir.Covid19Influx.Supervisor'},one_for_one,{['Elixir.Covid19Influx.RMQPublisher',covid_pool_id,'Elixir.Covid19Influx.Connection.Supervisor','Elixir.Covid19Influx.Scheduler','Elixir.Covid19Influx.ApplicationSettings'],#{'Elixir.Covid19Influx.ApplicationSettings' => {child,<0.339.0>,'Elixir.Covid19Influx.ApplicationSettings',{'Elixir.Covid19Influx.ApplicationSettings',start_link,[[]]},permanent,5000,worker,['Elixir.Covid19Influx.ApplicationSettings']},'Elixir.Covid19Influx.Connection.Supervisor' => {child,<0.352.0>,'Elixir.Covid19Influx.Connection.Supervisor',{'Elixir.Instream.Connection.Supervisor',start_link,['Elixir.Covid19Influx.Connection']},permanent,infinity,supervisor,['Elixir.Instream.Connection.Supervisor']},'Elixir.Covid19Influx.RMQPublisher' => {child,<0.361.0>,'Elixir.Covid19Influx.RMQPublisher',{'Elixir.Covid19Influx.RMQPublisher',start_link,[]},permanent,5000,worker,['Elixir.Covid19Influx.RMQPublisher']},'Elixir.Covid19Influx.Scheduler' => {child,<0.344.0>,'Elixir.Covid19Influx.Scheduler',{'Elixir.Covid19Influx.Scheduler',start_link,[[]]},permanent,5000,worker,['Elixir.Covid19Influx.Scheduler']},covid_pool_id => {child,<0.360.0>,covid_pool_id,{hackney_pool,start_link,[covid_pool_id,[{name,covid_pool_id},{timeout,15000},{max_connections,100}]]},permanent,10000,worker,[hackney_pool]}}},undefined,3,5,[],0,'Elixir.Supervisor.Default',{ok,{#{intensity => 3,period => 5,strategy => one_for_one},[#{id => 'Elixir.Covid19Influx.ApplicationSettings',start => {'Elixir.Covid19Influx.ApplicationSettings',start_link,[[]]}},#{id => 'Elixir.Covid19Influx.Scheduler',restart => permanent,start => {'Elixir.Covid19Influx.Scheduler',start_link,[[]]},type => worker},{'Elixir.Covid19Influx.Connection.Supervisor',{'Elixir.Instream.Connection.Supervisor',start_link,['Elixir.Covid19Influx.Connection']},permanent,infinity,supervisor,['Elixir.Instream.Connection.Supervisor']},{covid_pool_id,{hackney_pool,start_link,[covid_pool_id,[{name,covid_pool_id},{timeout,15000},{max_connections,100}]]},permanent,10000,worker,[hackney_pool]},#{id => 'Elixir.Covid19Influx.RMQPublisher',start => {'Elixir.Covid19Influx.RMQPublisher',start_link,[]}}]}}}
+** Reason for termination ==
+** {badarg,[{erlang,link,[<<"{\"end\":\"2020-03-28\",\"start\":\"2020-01-22\"}">>],[]},{application_master,start_it_old,4,[{file,"application_master.erl"},{line,279}]}]}

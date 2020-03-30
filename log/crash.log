@@ -1,0 +1,104 @@
+2020-03-30 01:32:09 =SUPERVISOR REPORT====
+     Supervisor: {local,'Elixir.Covid19Influx.Supervisor'}
+     Context:    start_error
+     Reason:     {'EXIT',{#{'__exception__' => true,'__struct__' => 'Elixir.ArgumentError',message => <<"invalid configuration given to Broadway.start_link/2, unknown options [:default], valid options are: [:module, :stages, :concurrency, :transformer, :spawn_opt, :hibernate_after, :rate_limiting]">>},[{'Elixir.Broadway',start_link,2,[{file,"lib/broadway.ex"},{line,832}]},{supervisor,do_start_child_i,3,[{file,"supervisor.erl"},{line,379}]},{supervisor,do_start_child,2,[{file,"supervisor.erl"},{line,365}]},{supervisor,'-start_children/2-fun-0-',3,[{file,"supervisor.erl"},{line,349}]},{supervisor,children_map,4,[{file,"supervisor.erl"},{line,1157}]},{supervisor,init_children,2,[{file,"supervisor.erl"},{line,315}]},{gen_server,init_it,2,[{file,"gen_server.erl"},{line,374}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,342}]}]}}
+     Offender:   [{pid,undefined},{id,'Elixir.Covid19Influx.DatesProcessor'},{mfargs,{'Elixir.Covid19Influx.DatesProcessor',start_link,[[]]}},{restart_type,permanent},{shutdown,infinity},{child_type,worker}]
+
+2020-03-30 01:32:09 =CRASH REPORT====
+  crasher:
+    initial call: application_master:init/4
+    pid: <0.331.0>
+    registered_name: []
+    exception exit: {{{shutdown,{failed_to_start_child,'Elixir.Covid19Influx.DatesProcessor',{'EXIT',{#{'__exception__' => true,'__struct__' => 'Elixir.ArgumentError',message => <<"invalid configuration given to Broadway.start_link/2, unknown options [:default], valid options are: [:module, :stages, :concurrency, :transformer, :spawn_opt, :hibernate_after, :rate_limiting]">>},[{'Elixir.Broadway',start_link,2,[{file,"lib/broadway.ex"},{line,832}]},{supervisor,do_start_child_i,3,[{file,"supervisor.erl"},{line,379}]},{supervisor,do_start_child,2,[{file,"supervisor.erl"},{line,365}]},{supervisor,'-start_children/2-fun-0-',3,[{file,"supervisor.erl"},{line,349}]},{supervisor,children_map,4,[{file,"supervisor.erl"},{line,1157}]},{supervisor,init_children,2,[{file,"supervisor.erl"},{line,315}]},{gen_server,init_it,2,[{file,"gen_server.erl"},{line,374}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,342}]}]}}}},{'Elixir.Covid19Influx.Application',start,[normal,[]]}},[{application_master,init,4,[{file,"application_master.erl"},{line,138}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+    ancestors: [<0.330.0>]
+    message_queue_len: 1
+    messages: [{'EXIT',<0.332.0>,normal}]
+    links: [<0.330.0>,<0.43.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 610
+    stack_size: 27
+    reductions: 250
+  neighbours:
+2020-03-30 01:43:48 =SUPERVISOR REPORT====
+     Supervisor: {local,'Elixir.Covid19Influx.Supervisor'}
+     Context:    start_error
+     Reason:     {'EXIT',{#{'__exception__' => true,'__struct__' => 'Elixir.ArgumentError',message => <<"invalid configuration given to Broadway.start_link/2, expected :concurrency to be a keyword list, got: 5">>},[{'Elixir.Broadway',start_link,2,[{file,"lib/broadway.ex"},{line,832}]},{supervisor,do_start_child_i,3,[{file,"supervisor.erl"},{line,379}]},{supervisor,do_start_child,2,[{file,"supervisor.erl"},{line,365}]},{supervisor,'-start_children/2-fun-0-',3,[{file,"supervisor.erl"},{line,349}]},{supervisor,children_map,4,[{file,"supervisor.erl"},{line,1157}]},{supervisor,init_children,2,[{file,"supervisor.erl"},{line,315}]},{gen_server,init_it,2,[{file,"gen_server.erl"},{line,374}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,342}]}]}}
+     Offender:   [{pid,undefined},{id,'Elixir.Covid19Influx.StatsProcessor'},{mfargs,{'Elixir.Covid19Influx.StatsProcessor',start_link,[[]]}},{restart_type,permanent},{shutdown,infinity},{child_type,worker}]
+
+2020-03-30 01:43:48 =CRASH REPORT====
+  crasher:
+    initial call: application_master:init/4
+    pid: <0.336.0>
+    registered_name: []
+    exception exit: {{{shutdown,{failed_to_start_child,'Elixir.Covid19Influx.StatsProcessor',{'EXIT',{#{'__exception__' => true,'__struct__' => 'Elixir.ArgumentError',message => <<"invalid configuration given to Broadway.start_link/2, expected :concurrency to be a keyword list, got: 5">>},[{'Elixir.Broadway',start_link,2,[{file,"lib/broadway.ex"},{line,832}]},{supervisor,do_start_child_i,3,[{file,"supervisor.erl"},{line,379}]},{supervisor,do_start_child,2,[{file,"supervisor.erl"},{line,365}]},{supervisor,'-start_children/2-fun-0-',3,[{file,"supervisor.erl"},{line,349}]},{supervisor,children_map,4,[{file,"supervisor.erl"},{line,1157}]},{supervisor,init_children,2,[{file,"supervisor.erl"},{line,315}]},{gen_server,init_it,2,[{file,"gen_server.erl"},{line,374}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,342}]}]}}}},{'Elixir.Covid19Influx.Application',start,[normal,[]]}},[{application_master,init,4,[{file,"application_master.erl"},{line,138}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,249}]}]}
+    ancestors: [<0.335.0>]
+    message_queue_len: 1
+    messages: [{'EXIT',<0.337.0>,normal}]
+    links: [<0.335.0>,<0.43.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 610
+    stack_size: 27
+    reductions: 246
+  neighbours:
+2020-03-30 01:55:49 =ERROR REPORT====
+** Generic server 'Elixir.Covid19Influx.StatsProcessor.Broadway.Producer_0' terminating 
+** Last message in was {connect,no_init_client}
+** When Server state == #{consumers => [],module => 'Elixir.BroadwayRabbitMQ.Producer',module_state => #{backoff => #{'__struct__' => 'Elixir.BroadwayRabbitMQ.Backoff',max => 30000,min => 1000,state => {1000,10000,{rand,{#{jump => #Fun<rand.3.8986388>,max => 288230376151711743,next => #Fun<rand.2.8986388>,type => exsplus},[95383532666681588|48729313453255800]}}},type => rand_exp},channel => nil,channel_ref => nil,client => 'Elixir.BroadwayRabbitMQ.AmqpClient',config => #{bindings => [],connection => [{username,<<"rabbitmq">>},{password,<<"rabbitmq">>}],declare_opts => nil,metadata => [],qos => [{prefetch_count,50}],queue => <<"bulk_data">>},conn_ref => nil,consumer_tag => nil,on_failure => reject_and_requeue,on_success => ack,opts => [{broadway,[{index,0},{hibernate_after,15000},{batchers,[]},{context,context_not_set},{resubscribe_interval,100},{max_seconds,5},{max_restarts,3},{shutdown,30000},{name,'Elixir.Covid19Influx.StatsProcessor'},{producer,[{hibernate_after,15000},{transformer,nil},{module,{'Elixir.BroadwayRabbitMQ.Producer',[{queue,<<"bulk_data">>},{connection,[{username,<<"rabbitmq">>},{password,<<"rabbitmq">>}]}]}},{concurrency,1}]},{processors,[{default,[{hibernate_after,15000},{max_demand,10},{concurrency,5}]}]}]},{queue,<<"bulk_data">>},{connection,[{username,<<"rabbitmq">>},{password,<<"rabbitmq">>}]}]},rate_limiting => nil,transformer => nil}
+** Reason for termination ==
+** {{{shutdown,{server_initiated_close,404,<<"NOT_FOUND - no queue 'bulk_data' in vhost '/'">>}},{gen_server,call,[<0.412.0>,{subscribe,{'basic.consume',0,<<"bulk_data">>,<<>>,false,false,false,false,[]},<0.418.0>},60000]}},[{gen_server,call,3,[{file,"gen_server.erl"},{line,223}]},{'Elixir.AMQP.Basic',consume,4,[{file,"lib/amqp/basic.ex"},{line,351}]},{'Elixir.BroadwayRabbitMQ.AmqpClient',consume,2,[{file,"lib/broadway_rabbitmq/amqp_client.ex"},{line,99}]},{'Elixir.BroadwayRabbitMQ.Producer',connect,2,[{file,"lib/broadway_rabbitmq/producer.ex"},{line,393}]},{'Elixir.BroadwayRabbitMQ.Producer',handle_info,2,[{file,"lib/broadway_rabbitmq/producer.ex"},{line,276}]},{'Elixir.Broadway.Producer',handle_info,2,[{file,"lib/broadway/producer.ex"},{line,258}]},{'Elixir.GenStage',noreply_callback,3,[{file,"lib/gen_stage.ex"},{line,2086}]},{gen_server,try_dispatch,4,[{file,"gen_server.erl"},{line,637}]}]}
+2020-03-30 01:55:49 =ERROR REPORT====
+** Generic server 'Elixir.Covid19Influx.DatesProcessor.Broadway.Producer_0' terminating 
+** Last message in was {connect,no_init_client}
+** When Server state == #{consumers => [],module => 'Elixir.BroadwayRabbitMQ.Producer',module_state => #{backoff => #{'__struct__' => 'Elixir.BroadwayRabbitMQ.Backoff',max => 30000,min => 1000,state => {1000,10000,{rand,{#{jump => #Fun<rand.3.8986388>,max => 288230376151711743,next => #Fun<rand.2.8986388>,type => exsplus},[163225903751061475|269131528756237520]}}},type => rand_exp},channel => nil,channel_ref => nil,client => 'Elixir.BroadwayRabbitMQ.AmqpClient',config => #{bindings => [],connection => [{username,<<"rabbitmq">>},{password,<<"rabbitmq">>}],declare_opts => nil,metadata => [],qos => [{prefetch_count,50}],queue => <<"dates_queue">>},conn_ref => nil,consumer_tag => nil,on_failure => reject_and_requeue,on_success => ack,opts => [{broadway,[{index,0},{hibernate_after,15000},{context,context_not_set},{resubscribe_interval,100},{max_seconds,5},{max_restarts,3},{shutdown,30000},{name,'Elixir.Covid19Influx.DatesProcessor'},{producer,[{hibernate_after,15000},{transformer,nil},{module,{'Elixir.BroadwayRabbitMQ.Producer',[{queue,<<"dates_queue">>},{connection,[{username,<<"rabbitmq">>},{password,<<"rabbitmq">>}]}]}},{concurrency,1}]},{processors,[{default,[{hibernate_after,15000},{max_demand,10},{concurrency,5}]}]},{batchers,[{batcher_1,[{hibernate_after,15000},{concurrency,2},{batch_size,2},{batch_timeout,10000}]}]}]},{queue,<<"dates_queue">>},{connection,[{username,<<"rabbitmq">>},{password,<<"rabbitmq">>}]}]},rate_limiting => nil,transformer => nil}
+** Reason for termination ==
+** {{{shutdown,{server_initiated_close,404,<<"NOT_FOUND - no queue 'dates_queue' in vhost '/'">>}},{gen_server,call,[<0.413.0>,{subscribe,{'basic.consume',0,<<"dates_queue">>,<<>>,false,false,false,false,[]},<0.417.0>},60000]}},[{gen_server,call,3,[{file,"gen_server.erl"},{line,223}]},{'Elixir.AMQP.Basic',consume,4,[{file,"lib/amqp/basic.ex"},{line,351}]},{'Elixir.BroadwayRabbitMQ.AmqpClient',consume,2,[{file,"lib/broadway_rabbitmq/amqp_client.ex"},{line,99}]},{'Elixir.BroadwayRabbitMQ.Producer',connect,2,[{file,"lib/broadway_rabbitmq/producer.ex"},{line,393}]},{'Elixir.BroadwayRabbitMQ.Producer',handle_info,2,[{file,"lib/broadway_rabbitmq/producer.ex"},{line,276}]},{'Elixir.Broadway.Producer',handle_info,2,[{file,"lib/broadway/producer.ex"},{line,258}]},{'Elixir.GenStage',noreply_callback,3,[{file,"lib/gen_stage.ex"},{line,2086}]},{gen_server,try_dispatch,4,[{file,"gen_server.erl"},{line,637}]}]}
+2020-03-30 01:55:49 =CRASH REPORT====
+  crasher:
+    initial call: Elixir.GenStage:init/1
+    pid: <0.366.0>
+    registered_name: 'Elixir.Covid19Influx.StatsProcessor.Broadway.Producer_0'
+    exception exit: {{{shutdown,{server_initiated_close,404,<<"NOT_FOUND - no queue 'bulk_data' in vhost '/'">>}},{gen_server,call,[<0.412.0>,{subscribe,{'basic.consume',0,<<"bulk_data">>,<<>>,false,false,false,false,[]},<0.418.0>},60000]}},[{gen_server,call,3,[{file,"gen_server.erl"},{line,223}]},{'Elixir.AMQP.Basic',consume,4,[{file,"lib/amqp/basic.ex"},{line,351}]},{'Elixir.BroadwayRabbitMQ.AmqpClient',consume,2,[{file,"lib/broadway_rabbitmq/amqp_client.ex"},{line,99}]},{'Elixir.BroadwayRabbitMQ.Producer',connect,2,[{file,"lib/broadway_rabbitmq/producer.ex"},{line,393}]},{'Elixir.BroadwayRabbitMQ.Producer',handle_info,2,[{file,"lib/broadway_rabbitmq/producer.ex"},{line,276}]},{'Elixir.Broadway.Producer',handle_info,2,[{file,"lib/broadway/producer.ex"},{line,258}]},{'Elixir.GenStage',noreply_callback,3,[{file,"lib/gen_stage.ex"},{line,2086}]},{gen_server,try_dispatch,4,[{file,"gen_server.erl"},{line,637}]}]}
+    ancestors: ['Elixir.Covid19Influx.StatsProcessor.Broadway.ProducerSupervisor','Elixir.Covid19Influx.StatsProcessor.Broadway.Supervisor','Elixir.Covid19Influx.StatsProcessor','Elixir.Covid19Influx.Supervisor',<0.323.0>]
+    message_queue_len: 11
+    messages: [{'$gen_producer',{<0.368.0>,#Ref<0.1594330698.3384541186.92649>},{subscribe,nil,[{name,'Elixir.Covid19Influx.StatsProcessor.Broadway.Producer_0'},{cancel,temporary},{partition,0},{max_demand,10}]}},{'$gen_producer',{<0.368.0>,#Ref<0.1594330698.3384541186.92649>},{ask,10}},{'$gen_producer',{<0.369.0>,#Ref<0.1594330698.3384541186.92654>},{subscribe,nil,[{name,'Elixir.Covid19Influx.StatsProcessor.Broadway.Producer_0'},{cancel,temporary},{partition,1},{max_demand,10}]}},{'$gen_producer',{<0.369.0>,#Ref<0.1594330698.3384541186.92654>},{ask,10}},{'$gen_producer',{<0.370.0>,#Ref<0.1594330698.3384541186.92659>},{subscribe,nil,[{name,'Elixir.Covid19Influx.StatsProcessor.Broadway.Producer_0'},{cancel,temporary},{partition,2},{max_demand,10}]}},{'$gen_producer',{<0.370.0>,#Ref<0.1594330698.3384541186.92659>},{ask,10}},{'$gen_producer',{<0.371.0>,#Ref<0.1594330698.3384541186.92663>},{subscribe,nil,[{name,'Elixir.Covid19Influx.StatsProcessor.Broadway.Producer_0'},{cancel,temporary},{partition,3},{max_demand,10}]}},{'$gen_producer',{<0.371.0>,#Ref<0.1594330698.3384541186.92663>},{ask,10}},{'$gen_producer',{<0.372.0>,#Ref<0.1594330698.3384541186.92667>},{subscribe,nil,[{name,'Elixir.Covid19Influx.StatsProcessor.Broadway.Producer_0'},{cancel,temporary},{partition,4},{max_demand,10}]}},{'$gen_producer',{<0.372.0>,#Ref<0.1594330698.3384541186.92667>},{ask,10}},{'DOWN',#Ref<0.1594330698.3384541185.90915>,process,<0.412.0>,{shutdown,{server_initiated_close,404,<<"NOT_FOUND - no queue 'bulk_data' in vhost '/'">>}}}]
+    links: [<0.365.0>]
+    dictionary: [{gen_server_call_timeout,60000}]
+    trap_exit: true
+    status: running
+    heap_size: 6772
+    stack_size: 27
+    reductions: 31572
+  neighbours:
+2020-03-30 01:55:49 =CRASH REPORT====
+  crasher:
+    initial call: Elixir.GenStage:init/1
+    pid: <0.349.0>
+    registered_name: 'Elixir.Covid19Influx.DatesProcessor.Broadway.Producer_0'
+    exception exit: {{{shutdown,{server_initiated_close,404,<<"NOT_FOUND - no queue 'dates_queue' in vhost '/'">>}},{gen_server,call,[<0.413.0>,{subscribe,{'basic.consume',0,<<"dates_queue">>,<<>>,false,false,false,false,[]},<0.417.0>},60000]}},[{gen_server,call,3,[{file,"gen_server.erl"},{line,223}]},{'Elixir.AMQP.Basic',consume,4,[{file,"lib/amqp/basic.ex"},{line,351}]},{'Elixir.BroadwayRabbitMQ.AmqpClient',consume,2,[{file,"lib/broadway_rabbitmq/amqp_client.ex"},{line,99}]},{'Elixir.BroadwayRabbitMQ.Producer',connect,2,[{file,"lib/broadway_rabbitmq/producer.ex"},{line,393}]},{'Elixir.BroadwayRabbitMQ.Producer',handle_info,2,[{file,"lib/broadway_rabbitmq/producer.ex"},{line,276}]},{'Elixir.Broadway.Producer',handle_info,2,[{file,"lib/broadway/producer.ex"},{line,258}]},{'Elixir.GenStage',noreply_callback,3,[{file,"lib/gen_stage.ex"},{line,2086}]},{gen_server,try_dispatch,4,[{file,"gen_server.erl"},{line,637}]}]}
+    ancestors: ['Elixir.Covid19Influx.DatesProcessor.Broadway.ProducerSupervisor','Elixir.Covid19Influx.DatesProcessor.Broadway.Supervisor','Elixir.Covid19Influx.DatesProcessor','Elixir.Covid19Influx.Supervisor',<0.323.0>]
+    message_queue_len: 11
+    messages: [{'$gen_producer',{<0.351.0>,#Ref<0.1594330698.3384541186.92546>},{subscribe,nil,[{name,'Elixir.Covid19Influx.DatesProcessor.Broadway.Producer_0'},{cancel,temporary},{partition,0},{max_demand,10}]}},{'$gen_producer',{<0.351.0>,#Ref<0.1594330698.3384541186.92546>},{ask,10}},{'$gen_producer',{<0.352.0>,#Ref<0.1594330698.3384541186.92551>},{subscribe,nil,[{name,'Elixir.Covid19Influx.DatesProcessor.Broadway.Producer_0'},{cancel,temporary},{partition,1},{max_demand,10}]}},{'$gen_producer',{<0.352.0>,#Ref<0.1594330698.3384541186.92551>},{ask,10}},{'$gen_producer',{<0.353.0>,#Ref<0.1594330698.3384541186.92556>},{subscribe,nil,[{name,'Elixir.Covid19Influx.DatesProcessor.Broadway.Producer_0'},{cancel,temporary},{partition,2},{max_demand,10}]}},{'$gen_producer',{<0.353.0>,#Ref<0.1594330698.3384541186.92556>},{ask,10}},{'$gen_producer',{<0.354.0>,#Ref<0.1594330698.3384541186.92561>},{subscribe,nil,[{name,'Elixir.Covid19Influx.DatesProcessor.Broadway.Producer_0'},{cancel,temporary},{partition,3},{max_demand,10}]}},{'$gen_producer',{<0.354.0>,#Ref<0.1594330698.3384541186.92561>},{ask,10}},{'$gen_producer',{<0.355.0>,#Ref<0.1594330698.3384541186.92566>},{subscribe,nil,[{name,'Elixir.Covid19Influx.DatesProcessor.Broadway.Producer_0'},{cancel,temporary},{partition,4},{max_demand,10}]}},{'$gen_producer',{<0.355.0>,#Ref<0.1594330698.3384541186.92566>},{ask,10}},{'DOWN',#Ref<0.1594330698.3384541186.92879>,process,<0.413.0>,{shutdown,{server_initiated_close,404,<<"NOT_FOUND - no queue 'dates_queue' in vhost '/'">>}}}]
+    links: [<0.348.0>]
+    dictionary: [{gen_server_call_timeout,60000}]
+    trap_exit: true
+    status: running
+    heap_size: 6772
+    stack_size: 27
+    reductions: 32407
+  neighbours:
+2020-03-30 01:55:49 =SUPERVISOR REPORT====
+     Supervisor: {local,'Elixir.Covid19Influx.StatsProcessor.Broadway.ProducerSupervisor'}
+     Context:    child_terminated
+     Reason:     {{shutdown,{server_initiated_close,404,<<"NOT_FOUND - no queue 'bulk_data' in vhost '/'">>}},{gen_server,call,[<0.412.0>,{subscribe,{'basic.consume',0,<<"bulk_data">>,<<>>,false,false,false,false,[]},<0.418.0>},60000]}}
+     Offender:   [{pid,<0.366.0>},{id,'Elixir.Covid19Influx.StatsProcessor.Broadway.Producer_0'},{mfargs,{'Elixir.Broadway.Producer',start_link,[[{broadway,[{hibernate_after,15000},{batchers,[]},{context,context_not_set},{resubscribe_interval,100},{max_seconds,5},{max_restarts,3},{shutdown,30000},{name,'Elixir.Covid19Influx.StatsProcessor'},{producer,[{hibernate_after,15000},{transformer,nil},{module,{'Elixir.BroadwayRabbitMQ.Producer',[{queue,<<"bulk_data">>},{connection,[{username,<<"rabbitmq">>},{password,<<"rabbitmq">>}]}]}},{concurrency,1}]},{processors,[{default,[{hibernate_after,15000},{max_demand,10},{concurrency,5}]}]}]},{dispatcher,'Elixir.GenStage.DemandDispatcher'},{hibernate_after,15000},{transformer,nil},{module,{'Elixir.BroadwayRabbitMQ.Producer',[{queue,<<"bulk_data">>},{connection,[{username,<<"rabbitmq">>},{password,<<"rabbitmq">>}]}]}},{concurrency,1}],0,[{name,'Elixir.Covid19Influx.StatsProcessor.Broadway.Producer_0'},{hibernate_after,15000}]]}},{restart_type,permanent},{shutdown,30000},{child_type,worker}]
+
+2020-03-30 01:55:49 =SUPERVISOR REPORT====
+     Supervisor: {local,'Elixir.Covid19Influx.DatesProcessor.Broadway.ProducerSupervisor'}
+     Context:    child_terminated
+     Reason:     {{shutdown,{server_initiated_close,404,<<"NOT_FOUND - no queue 'dates_queue' in vhost '/'">>}},{gen_server,call,[<0.413.0>,{subscribe,{'basic.consume',0,<<"dates_queue">>,<<>>,false,false,false,false,[]},<0.417.0>},60000]}}
+     Offender:   [{pid,<0.349.0>},{id,'Elixir.Covid19Influx.DatesProcessor.Broadway.Producer_0'},{mfargs,{'Elixir.Broadway.Producer',start_link,[[{broadway,[{hibernate_after,15000},{context,context_not_set},{resubscribe_interval,100},{max_seconds,5},{max_restarts,3},{shutdown,30000},{name,'Elixir.Covid19Influx.DatesProcessor'},{producer,[{hibernate_after,15000},{transformer,nil},{module,{'Elixir.BroadwayRabbitMQ.Producer',[{queue,<<"dates_queue">>},{connection,[{username,<<"rabbitmq">>},{password,<<"rabbitmq">>}]}]}},{concurrency,1}]},{processors,[{default,[{hibernate_after,15000},{max_demand,10},{concurrency,5}]}]},{batchers,[{batcher_1,[{hibernate_after,15000},{concurrency,2},{batch_size,2},{batch_timeout,10000}]}]}]},{dispatcher,'Elixir.GenStage.DemandDispatcher'},{hibernate_after,15000},{transformer,nil},{module,{'Elixir.BroadwayRabbitMQ.Producer',[{queue,<<"dates_queue">>},{connection,[{username,<<"rabbitmq">>},{password,<<"rabbitmq">>}]}]}},{concurrency,1}],0,[{name,'Elixir.Covid19Influx.DatesProcessor.Broadway.Producer_0'},{hibernate_after,15000}]]}},{restart_type,permanent},{shutdown,30000},{child_type,worker}]
+
