@@ -1,7 +1,9 @@
 # Description
 
 Elixir/OTP application fetching CoVID-19 data relating Italy.
-Data is stored in an InfluxDB database. 
+Data is stored in an InfluxDB database.
+
+The API used to fetch the data is https://github.com/backtrackbaba/covid-api
 
 The application consists of 3 fundamental components:
 
